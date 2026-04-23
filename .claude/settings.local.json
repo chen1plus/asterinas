@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh issue *)",
+      "WebFetch(domain:github.com)",
+      "Bash(cargo check *)",
+      "Bash(cargo osdk *)",
+      "Bash(gcc -Wall -Werror -D__asterinas__ bpf_udp_hook.c -o /tmp/bpf_udp_hook_test)",
+      "Bash(timeout 580 make test AUTO_TEST=regression)",
+      "Bash(timeout 580 make run_kernel AUTO_TEST=regression ENABLE_KVM=0)",
+      "Bash(xargs -I {} basename {})",
+      "Bash(ENABLE_REGRESSION_TEST=true make initramfs)",
+      "Bash(chmod +x /root/asterinas/test/initramfs/src/regression/network/_bpf_only.sh)",
+      "Bash(cargo doc *)",
+      "Bash(cargo metadata *)",
+      "Bash(git submodule *)",
+      "Bash(cargo test *)",
+      "Bash(RUSTFLAGS=\"--cfg ktest\" cargo check -p aster-bigtcp --target x86_64-unknown-none)",
+      "Bash(gcc -Wall -Werror -fsyntax-only bpf_udp_hook_metadata.c)",
+      "Bash(gcc -Wall -Werror -fsyntax-only bpf_udp_hook_a.c)"
+    ]
+  }
+}
