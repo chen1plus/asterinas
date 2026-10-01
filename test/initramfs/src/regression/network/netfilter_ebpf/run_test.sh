@@ -27,5 +27,7 @@ run_case() {
 run_case accept.bin pass "accept payload"
 run_case drop.bin drop "drop payload"
 run_case check_meta.bin pass "meta payload"
+run_case check_payload_a.bin pass "apple"
+run_case check_payload_a.bin drop "banana"
 
 echo "netfilter eBPF demo passed"
